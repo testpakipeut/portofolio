@@ -1,6 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import About from "@/components/About";
-import Timeline from "@/components/Timeline";
+import Experiences from "@/components/Experiences";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Services from "@/components/Services";
@@ -13,7 +13,7 @@ export default function Home() {
     <main className="min-h-screen bg-gray-900">
       <HeroSection />
       <About />
-      <Timeline />
+      <Experiences />
       <Skills />
       <Projects />
       <Services />

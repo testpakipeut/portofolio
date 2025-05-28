@@ -115,7 +115,7 @@ const experiences = [
   }
 ];
 
-const Timeline = () => {
+const Experiences = () => {
   const [selectedExp, setSelectedExp] = useState<typeof experiences[0] | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -274,4 +274,4 @@ const Timeline = () => {
   );
 };
 
-export default Timeline; 
+export default Experiences; 

@@ -11,6 +11,8 @@ const Header = () => {
           <li><a href="#experiences" className="hover:text-cyan-400 transition">Expériences</a></li>
           <li><a href="#skills" className="hover:text-cyan-400 transition">Compétences</a></li>
           <li><a href="#projects" className="hover:text-cyan-400 transition">Projets</a></li>
+          <li><a href="#services" className="hover:text-cyan-400 transition">Services</a></li>
+          <li><a href="#devis" className="hover:text-cyan-400 transition">Devis</a></li>
           <li><a href="#contact" className="hover:text-cyan-400 transition">Contact</a></li>
         </ul>
       </nav>
