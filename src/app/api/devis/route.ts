@@ -8,8 +8,7 @@ export async function POST(request: Request) {
       email,
       telephone,
       ville,
-      pays,
-      typeProjet,
+      type_projet,
       objectif,
       fonctionnalites,
       design,
@@ -19,7 +18,7 @@ export async function POST(request: Request) {
     } = await request.json();
 
     // Validation basique
-    if (!nom || !email || !typeProjet || !objectif || !design || !budget || !delais) {
+    if (!nom || !email || !type_projet || !objectif || !design || !budget || !delais) {
       return NextResponse.json(
         { error: 'Veuillez remplir tous les champs obligatoires' },
         { status: 400 }
@@ -29,16 +28,15 @@ export async function POST(request: Request) {
     // Insertion dans la base de données
     await pool.execute(
       `INSERT INTO devis (
-        nom, email, telephone, ville, pays, type_projet, objectif,
+        nom, email, telephone, ville, type_projet, objectif,
         fonctionnalites, design, budget, delais, autres
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         nom,
         email,
         telephone || null,
         ville,
-        pays,
-        typeProjet,
+        type_projet,
         objectif,
         JSON.stringify(fonctionnalites),
         design,

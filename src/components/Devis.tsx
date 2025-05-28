@@ -9,7 +9,7 @@ const Devis = () => {
     email: '',
     telephone: '',
     ville: '',
-    typeProjet: '',
+    type_projet: '',
     objectif: '',
     fonctionnalites: [] as string[],
     design: '',
@@ -73,7 +73,7 @@ const Devis = () => {
           email: '',
           telephone: '',
           ville: '',
-          typeProjet: '',
+          type_projet: '',
           objectif: '',
           fonctionnalites: [],
           design: '',
@@ -198,8 +198,8 @@ const Devis = () => {
             <h3 className="text-2xl font-semibold mb-6">2. Type de projet</h3>
             <div className="space-y-4">
               <select
-                name="typeProjet"
-                value={formData.typeProjet}
+                name="type_projet"
+                value={formData.type_projet}
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white"
