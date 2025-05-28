@@ -82,7 +82,7 @@ const projects = [
   {
     title: "Portfolio Next.js",
     description: "Site personnel moderne avec animations et responsive.",
-    link: "#",
+    link: "https://portofolio-production-e5a2.up.railway.app/",
     details: [
       "Développement d'un portfolio moderne avec Next.js et TypeScript",
       "Intégration d'animations fluides avec Framer Motion",
@@ -92,7 +92,7 @@ const projects = [
     ],
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     images: ["/portfolio-1.jpg", "/portfolio-2.jpg"],
-    github: "https://github.com/votre-username/portfolio"
+    github: "https://github.com/testpakipeut/portofolio"
   }
 ];
 
