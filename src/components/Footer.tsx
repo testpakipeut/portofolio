@@ -10,18 +10,18 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="hover:opacity-80 transition"
+            className="hover:text-cyan-400 transition"
           >
-            <img src="/logos/github.png" alt="GitHub" width={28} height={28} style={{ display: 'inline-block' }} />
+            <i className="fab fa-github fa-2x"></i>
           </a>
           <a
             href="https://www.linkedin.com/in/zoumeye-toure-0b205467/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="hover:opacity-80 transition"
+            className="hover:text-cyan-400 transition"
           >
-            <img src="/logos/linkedin.png" alt="LinkedIn" width={28} height={28} style={{ display: 'inline-block' }} />
+            <i className="fab fa-linkedin fa-2x"></i>
           </a>
         </div>
         <div>
