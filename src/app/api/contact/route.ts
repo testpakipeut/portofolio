@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     }
 
     // Insertion dans la base de données
-    const [result] = await pool.execute(
+    await pool.execute(
       'INSERT INTO messages (nom, email, message) VALUES (?, ?, ?)',
       [nom, email, message]
     );

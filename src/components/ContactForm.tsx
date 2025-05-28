@@ -48,7 +48,7 @@ const ContactForm = () => {
           },
         });
       }
-    } catch (error) {
+    } catch {
       toast.error('Une erreur est survenue. Veuillez réessayer.', {
         duration: 5000,
         style: {
