@@ -3,9 +3,9 @@ import About from "@/components/About";
 import Timeline from "@/components/Timeline";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
-import ContactForm from "@/components/ContactForm";
 import Services from "@/components/Services";
 import Devis from "@/components/Devis";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 export default function Home() {
