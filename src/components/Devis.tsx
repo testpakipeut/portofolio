@@ -265,8 +265,8 @@ const Devis = () => {
                 className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white"
               >
                 <option value="">Sélectionnez une option</option>
-                <option value="oui">Oui, j'ai une charte graphique</option>
-                <option value="non">Non, j'ai besoin d'accompagnement</option>
+                <option value="oui">Oui, j&apos;ai une charte graphique</option>
+                <option value="non">Non, j&apos;ai besoin d&apos;accompagnement</option>
               </select>
             </div>
           </div>
@@ -307,7 +307,7 @@ const Devis = () => {
                   className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white"
                 >
                   <option value="">Sélectionnez un délai</option>
-                  <option value="urgent">Urgent (moins d'un mois)</option>
+                  <option value="urgent">Urgent (moins d&apos;un mois)</option>
                   <option value="1-2">1-2 mois</option>
                   <option value="2-3">2-3 mois</option>
                   <option value="discussion">À discuter</option>
