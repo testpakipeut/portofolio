@@ -200,8 +200,8 @@ const Devis = () => {
               >
                 <option value="">Sélectionnez un type de projet</option>
                 <option value="site-vitrine">Création de site vitrine</option>
-                <option value="application">Développement d'application web ou mobile</option>
-                <option value="ged">Intégration d'une GED (gestion documentaire)</option>
+                <option value="application">Développement d&apos;application web ou mobile</option>
+                <option value="ged">Intégration d&apos;une GED (gestion documentaire)</option>
                 <option value="sur-mesure">Développement sur mesure (CRM, RH/paie, IA…)</option>
                 <option value="autre">Autre</option>
               </select>
