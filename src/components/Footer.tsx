@@ -1,5 +1,4 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -11,18 +10,18 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="hover:text-cyan-400 transition"
+            className="hover:opacity-80 transition"
           >
-            <FaGithub size={28} />
+            <img src="/logos/github.png" alt="GitHub" width={28} height={28} style={{ display: 'inline-block' }} />
           </a>
           <a
             href="https://www.linkedin.com/in/zoumeye-toure-0b205467/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="hover:text-cyan-400 transition"
+            className="hover:opacity-80 transition"
           >
-            <FaLinkedin size={28} />
+            <img src="/logos/linkedin.png" alt="LinkedIn" width={28} height={28} style={{ display: 'inline-block' }} />
           </a>
         </div>
         <div>
