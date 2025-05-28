@@ -42,8 +42,10 @@ const Devis = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    console.log('Début de la soumission du devis:', formData);
 
     try {
+      console.log('Envoi de la requête au serveur...');
       const response = await fetch('/api/devis', {
         method: 'POST',
         headers: {
@@ -52,9 +54,12 @@ const Devis = () => {
         body: JSON.stringify(formData),
       });
 
+      console.log('Réponse reçue du serveur:', response.status);
       const data = await response.json();
+      console.log('Données reçues:', data);
 
       if (response.ok) {
+        console.log('Devis envoyé avec succès');
         toast.success('Votre demande de devis a été envoyée avec succès ! Je vous répondrai dans les plus brefs délais.', {
           duration: 5000,
           style: {
@@ -79,6 +84,7 @@ const Devis = () => {
           autres: ''
         });
       } else {
+        console.error('Erreur lors de l\'envoi du devis:', data.error);
         toast.error(data.error || 'Une erreur est survenue. Veuillez réessayer.', {
           duration: 5000,
           style: {
@@ -89,7 +95,8 @@ const Devis = () => {
           },
         });
       }
-    } catch {
+    } catch (error) {
+      console.error('Exception lors de l\'envoi du devis:', error);
       toast.error('Une erreur est survenue. Veuillez réessayer.', {
         duration: 5000,
         style: {
@@ -101,6 +108,7 @@ const Devis = () => {
       });
     } finally {
       setIsSubmitting(false);
+      console.log('Fin du processus de soumission');
     }
   };
 
@@ -226,17 +234,17 @@ const Devis = () => {
 
           {/* Fonctionnalités */}
           <div className="bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-6">4. Fonctionnalités souhaitées</h3>
+            <h3 className="text-2xl font-semibold mb-6">4. Services souhaités</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                'Formulaire de contact',
-                'Authentification utilisateur',
-                'Paiement en ligne',
-                'Tableau de bord',
-                'Blog / Actualités',
-                'Gestion de contenu',
-                'Génération de PDF',
-                'Intégration API'
+                'Création de site vitrine professionnel',
+                'Développement de système de gestion documentaire (GED)',
+                'Mise en place d\'une plateforme métier sur mesure (CRM, RH, Paie, etc.)',
+                'Intégration d\'API externes',
+                'Migration ou refonte d\'applications existantes',
+                'Déploiement et automatisation des processus métiers',
+                'Portail client ou espace sécurisé avec authentification',
+                'Conception ou personnalisation de CMS (WordPress ou autres)'
               ].map((feature) => (
                 <label key={feature} className="flex items-center space-x-3">
                   <input
@@ -288,10 +296,10 @@ const Devis = () => {
                   className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white"
                 >
                   <option value="">Sélectionnez une fourchette</option>
-                  <option value="<500">Moins de 500€</option>
-                  <option value="500-1000">500€ - 1000€</option>
-                  <option value="1000-2000">1000€ - 2000€</option>
-                  <option value=">2000">Plus de 2000€</option>
+                  <option value="<2000">Moins de 2000€</option>
+                  <option value="2000-5000">2000€ - 5000€</option>
+                  <option value="5000-10000">5000€ - 10000€</option>
+                  <option value=">10000">Plus de 10000€</option>
                 </select>
               </div>
               <div>

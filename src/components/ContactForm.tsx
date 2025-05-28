@@ -14,8 +14,10 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    console.log('Début de la soumission du message:', formData);
 
     try {
+      console.log('Envoi de la requête au serveur...');
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -24,9 +26,12 @@ const ContactForm = () => {
         body: JSON.stringify(formData),
       });
 
+      console.log('Réponse reçue du serveur:', response.status);
       const data = await response.json();
+      console.log('Données reçues:', data);
 
       if (response.ok) {
+        console.log('Message envoyé avec succès');
         toast.success('Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.', {
           duration: 5000,
           style: {
@@ -38,6 +43,7 @@ const ContactForm = () => {
         });
         setFormData({ nom: "", email: "", message: "" });
       } else {
+        console.error('Erreur lors de l\'envoi du message:', data.error);
         toast.error(data.error || 'Une erreur est survenue. Veuillez réessayer.', {
           duration: 5000,
           style: {
@@ -48,7 +54,8 @@ const ContactForm = () => {
           },
         });
       }
-    } catch {
+    } catch (error) {
+      console.error('Exception lors de l\'envoi du message:', error);
       toast.error('Une erreur est survenue. Veuillez réessayer.', {
         duration: 5000,
         style: {
@@ -60,6 +67,7 @@ const ContactForm = () => {
       });
     } finally {
       setIsSubmitting(false);
+      console.log('Fin du processus de soumission');
     }
   };
 

@@ -1,27 +1,18 @@
 import mysql from 'mysql2/promise';
 
-const pool = mysql.createPool({
-  host: process.env.MYSQL_HOST,
-  port: Number(process.env.MYSQL_PORT),
-  user: process.env.MYSQL_USER,
-  password: process.env.MYSQL_PASSWORD,
-  database: process.env.MYSQL_DATABASE,
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0
-});
+const pool = mysql.createPool('mysql://root:tlyPCMspajOcoxFhqzwmdzXHdlimBRRG@switchyard.proxy.rlwy.net:39465/railway');
 
 // Fonction pour initialiser la base de données
 async function initDatabase() {
   try {
     // Vérifier si la table messages existe
     const [rows] = await pool.query<mysql.RowDataPacket[]>(
-      "SELECT COUNT(*) as count FROM information_schema.tables WHERE table_schema = ? AND table_name = 'messages'",
-      [process.env.MYSQL_DATABASE]
+      "SELECT COUNT(*) as count FROM information_schema.tables WHERE table_schema = 'railway' AND table_name = 'messages'"
     );
 
     // Si la table n'existe pas, la créer
     if (rows[0].count === 0) {
+      console.log('Création de la table messages...');
       await pool.query(`
         CREATE TABLE IF NOT EXISTS messages (
           id INT AUTO_INCREMENT PRIMARY KEY,
@@ -38,12 +29,12 @@ async function initDatabase() {
 
     // Vérifier si la table devis existe
     const [devisRows] = await pool.query<mysql.RowDataPacket[]>(
-      "SELECT COUNT(*) as count FROM information_schema.tables WHERE table_schema = ? AND table_name = 'devis'",
-      [process.env.MYSQL_DATABASE]
+      "SELECT COUNT(*) as count FROM information_schema.tables WHERE table_schema = 'railway' AND table_name = 'devis'"
     );
 
     // Si la table n'existe pas, la créer
     if (devisRows[0].count === 0) {
+      console.log('Création de la table devis...');
       await pool.query(`
         CREATE TABLE IF NOT EXISTS devis (
           id INT AUTO_INCREMENT PRIMARY KEY,
