@@ -9,7 +9,7 @@ const projects = [
   {
     title: "CRMiracle - Gestion commerciale",
     description: "Développement d'une application full-stack complète pour la gestion commerciale, incluant la gestion des clients, factures, contrats et paiements.",
-    period: "Juillet 2024 – Décembre 2025",
+    period: "Juillet 2024 – Décembre 2024",
     details: [
       "Gestion clients : profils, historique, contacts et facturation",
       "Gestion financière : factures, devis, paiements, TVA collectée et déductible, relances automatiques et manuelles",
