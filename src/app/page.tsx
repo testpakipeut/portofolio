@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import About from "@/components/About";
+import CV from "@/components/CV";
 import Experiences from "@/components/Experiences";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="min-h-screen bg-gray-900">
       <HeroSection />
       <About />
+      <CV />
       <Experiences />
       <Skills />
       <Projects />

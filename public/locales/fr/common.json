@@ -1,0 +1,73 @@
+{
+  "welcome": "Bienvenue sur mon Portfolio",
+  "contact": "Contact",
+  "projects": "Projets",
+  "services": "Services",
+  "about": "À propos",
+  "name": "Zoumeye TOURE",
+  "hero_description": "Développeur Full Stack passionné par la création d'applications web modernes et performantes",
+  "see_projects": "Voir mes projets",
+  "contact_me": "Me contacter",
+  "contact_title": "Contact",
+  "contact_name": "Nom",
+  "contact_email": "Email",
+  "contact_message": "Message",
+  "contact_send": "Envoyer",
+  "contact_sending": "Envoi en cours...",
+  "contact_success": "Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.",
+  "contact_error": "Une erreur est survenue. Veuillez réessayer.",
+  "devis_title": "🔍 Demande de devis",
+  "devis_contact_info": "1. Informations de contact",
+  "devis_full_name": "Nom complet / Raison sociale",
+  "devis_email": "Adresse e-mail",
+  "devis_phone": "Numéro de téléphone",
+  "devis_city": "Ville / Pays",
+  "devis_project_type": "2. Type de projet",
+  "devis_select_project": "Sélectionnez un type de projet",
+  "devis_project_types": {
+    "site-vitrine": "Création de site vitrine",
+    "application": "Développement d'application web ou mobile",
+    "ged": "Intégration d'une GED (gestion documentaire)",
+    "sur-mesure": "Développement sur mesure (CRM, RH/paie, IA…)",
+    "autre": "Autre"
+  },
+  "devis_objectives": "3. Objectifs du projet",
+  "devis_objectives_placeholder": "Décrivez les objectifs principaux de votre projet...",
+  "devis_services": "4. Services souhaités",
+  "devis_services_list": {
+    "site-vitrine": "Création de site vitrine professionnel",
+    "ged": "Développement de système de gestion documentaire (GED)",
+    "crm": "Mise en place d'une plateforme métier sur mesure (CRM, RH, Paie, etc.)",
+    "api": "Intégration d'API externes",
+    "migration": "Migration ou refonte d'applications existantes",
+    "deployment": "Déploiement et automatisation des processus métiers",
+    "portal": "Portail client ou espace sécurisé avec authentification",
+    "cms": "Conception ou personnalisation de CMS (WordPress ou autres)"
+  },
+  "devis_design": "5. Design et branding",
+  "devis_design_options": {
+    "oui": "Oui, j'ai une charte graphique",
+    "non": "Non, j'ai besoin d'accompagnement"
+  },
+  "devis_budget": "6. Budget et délais",
+  "devis_budget_estimated": "Budget estimé",
+  "devis_budget_ranges": {
+    "<2000": "Moins de 2000€",
+    "2000-5000": "2000€ - 5000€",
+    "5000-10000": "5000€ - 10000€",
+    ">10000": "Plus de 10000€"
+  },
+  "devis_timeline": "Délais souhaités",
+  "devis_timeline_options": {
+    "urgent": "Urgent (moins d'un mois)",
+    "1-2": "1-2 mois",
+    "2-3": "2-3 mois",
+    "discussion": "À discuter"
+  },
+  "devis_other": "7. Autres précisions",
+  "devis_other_placeholder": "Exemples de sites/applications que vous aimez ou toute autre précision utile...",
+  "devis_submit": "Envoyer la demande de devis",
+  "devis_sending": "Envoi en cours...",
+  "devis_success": "Votre demande de devis a été envoyée avec succès ! Je vous répondrai dans les plus brefs délais.",
+  "devis_error": "Une erreur est survenue. Veuillez réessayer."
+} 

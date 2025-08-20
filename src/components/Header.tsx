@@ -8,6 +8,7 @@ const Header = () => {
         <ul className="flex space-x-6 text-white font-medium">
           <li><a href="#hero" className="hover:text-cyan-400 transition">Accueil</a></li>
           <li><a href="#about" className="hover:text-cyan-400 transition">À propos</a></li>
+          <li><a href="#cv" className="hover:text-cyan-400 transition">CV</a></li>
           <li><a href="#experiences" className="hover:text-cyan-400 transition">Expériences</a></li>
           <li><a href="#skills" className="hover:text-cyan-400 transition">Compétences</a></li>
           <li><a href="#projects" className="hover:text-cyan-400 transition">Projets</a></li>
