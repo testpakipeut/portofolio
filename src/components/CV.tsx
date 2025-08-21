@@ -72,16 +72,38 @@ const PreviewModal = ({ isOpen, onClose, cvData }: { isOpen: boolean; onClose: (
               PRÉSENTATION
             </h3>
             <p className="text-gray-700 leading-relaxed">
-              Développeur Full Stack passionné avec plus de 8 ans d&apos;expérience dans la création 
-              d&apos;applications web modernes et performantes. Spécialisé dans les technologies 
-              Java/JEE, Spring Boot, React.js et l&apos;expertise en Gestion Électronique de Documents (GED) avec IBM FileNet.
+              Passionné par le développement logiciel, je m'engage à créer des solutions robustes et innovantes. Mon approche combine une expertise technique approfondie avec une attention particulière à la qualité du code et à l'expérience utilisateur. Je m'efforce constamment d'améliorer mes compétences et de rester à jour avec les dernières technologies.
             </p>
-            <p className="text-gray-700 leading-relaxed mt-4">
-              Je suis constamment à la recherche de nouveaux défis techniques et j&apos;aime 
-              partager mes connaissances avec les équipes. Mon approche combine créativité, 
-              rigueur technique et une vision orientée utilisateur, avec une expertise particulière 
-              dans l&apos;architecture de systèmes documentaires et les solutions d&apos;intelligence artificielle.
-            </p>
+          </div>
+
+          {/* Niveau d'intervention */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4 border-l-4 border-cyan-500 pl-4">
+              NIVEAU D'INTERVENTION
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="text-lg font-semibold text-gray-700 mb-3">Activités principales :</h4>
+                <ul className="text-gray-700 space-y-2">
+                  <li>• Conception et développement d'applications Full Stack</li>
+                  <li>• Intégration de solutions logicielles et interconnexion de systèmes</li>
+                  <li>• Rédaction de spécifications fonctionnelles et techniques</li>
+                  <li>• Maintenance corrective et évolutive des applications</li>
+                  <li>• Analyse, optimisation des performances et refactoring</li>
+                  <li>• Accompagnement au changement et support aux utilisateurs</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-700 mb-3">Secteurs d'activité :</h4>
+                <ul className="text-gray-700 space-y-2">
+                  <li>• Télécommunications</li>
+                  <li>• Banque & Assurances</li>
+                  <li>• Recherche & Innovation</li>
+                  <li>• Transport</li>
+                  <li>• Santé</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* Expériences */}
@@ -121,33 +143,73 @@ const PreviewModal = ({ isOpen, onClose, cvData }: { isOpen: boolean; onClose: (
           {/* Compétences */}
           <div className="mb-8">
             <h3 className="text-2xl font-bold text-gray-800 mb-4 border-l-4 border-cyan-500 pl-4">
-              COMPÉTENCES TECHNIQUES
+              COMPÉTENCES TECHNIQUES ET FONCTIONNELLES
             </h3>
-            <div className="space-y-4">
-              {cvData.competences.map((comp, index) => (
-                <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                  <div className="flex justify-between items-center mb-2">
-                    <h4 className="font-semibold text-gray-800">{comp.nom}</h4>
-                    <span className="text-cyan-600 font-bold">{comp.niveau}%</span>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-lg font-semibold text-gray-700 mb-4">Domaines Techniques :</h4>
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="font-medium text-gray-600 mb-2">Langages :</h5>
+                    <p className="text-gray-700">Java, JavaScript (ES6+), TypeScript, PHP, C#, HTML/CSS, SQL</p>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2 mb-3">
-                    <div
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full"
-                      style={{ width: `${comp.niveau}%` }}
-                    />
+                  <div>
+                    <h5 className="font-medium text-gray-600 mb-2">Frameworks :</h5>
+                    <p className="text-gray-700">Java EE, Spring Boot, Spring MVC, Hibernate, React.js, Angular, Next.js, Node.js</p>
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    {comp.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-2 py-1 bg-cyan-100 text-cyan-700 rounded-full text-xs"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                  <div>
+                    <h5 className="font-medium text-gray-600 mb-2">Services web :</h5>
+                    <p className="text-gray-700">REST, SOA, Web Services, JSP, XML, JSON</p>
+                  </div>
+                  <div>
+                    <h5 className="font-medium text-gray-600 mb-2">Base de données :</h5>
+                    <p className="text-gray-700">Oracle, MongoDB, PostgreSQL, MySQL, SQL Server</p>
+                  </div>
+                  <div>
+                    <h5 className="font-medium text-gray-600 mb-2">Systèmes d'exploitation :</h5>
+                    <p className="text-gray-700">Unix, Linux, Windows</p>
+                  </div>
+                  <div>
+                    <h5 className="font-medium text-gray-600 mb-2">Cloud & DevOps :</h5>
+                    <p className="text-gray-700">AWS, Azure, Docker, Jenkins, GitLab, CI/CD</p>
+                  </div>
+                  <div>
+                    <h5 className="font-medium text-gray-600 mb-2">Autres :</h5>
+                    <p className="text-gray-700">Machine Learning, IA, UML, Sonar, RabbitMQ, GED (IBM FileNet)</p>
                   </div>
                 </div>
-              ))}
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-700 mb-4">Domaines Fonctionnels :</h4>
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="font-medium text-gray-600 mb-2">Gestion de projet :</h5>
+                    <ul className="text-gray-700 space-y-1">
+                      <li>• Conception de dossiers de spécification</li>
+                      <li>• Documentations fonctionnelles et techniques</li>
+                      <li>• Pilotage de projets techniques</li>
+                      <li>• Accompagnement au changement</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-medium text-gray-600 mb-2">Méthodes :</h5>
+                    <ul className="text-gray-700 space-y-1">
+                      <li>• Agile (SCRUM)</li>
+                      <li>• Cycle en V</li>
+                      <li>• Intégration continue</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-medium text-gray-600 mb-2">Expertise métier :</h5>
+                    <ul className="text-gray-700 space-y-1">
+                      <li>• Gestion Électronique de Documents (GED)</li>
+                      <li>• CRM et gestion commerciale</li>
+                      <li>• Gestion des ressources humaines</li>
+                      <li>• Systèmes de facturation</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -174,6 +236,27 @@ const PreviewModal = ({ isOpen, onClose, cvData }: { isOpen: boolean; onClose: (
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Langues */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4 border-l-4 border-cyan-500 pl-4">
+              LANGUES
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <h4 className="font-semibold text-gray-700 mb-2">Français</h4>
+                <p className="text-gray-600">Langue maternelle</p>
+              </div>
+              <div className="text-center">
+                <h4 className="font-semibold text-gray-700 mb-2">Anglais</h4>
+                <p className="text-gray-600">Technique</p>
+              </div>
+              <div className="text-center">
+                <h4 className="font-semibold text-gray-700 mb-2">Allemand</h4>
+                <p className="text-gray-600">Bases</p>
+              </div>
             </div>
           </div>
 
@@ -219,6 +302,22 @@ const CV = () => {
   ];
 
   const experiences = [
+    {
+      poste: 'Chef de projet / Développeur Fullstack JavaScript',
+      entreprise: 'Freelance',
+      lieu: 'Projet CRM',
+      periode: 'Août 2024 – Aujourd\'hui',
+      description: 'Conception et pilotage d\'un CRM sur mesure en Next.js et MongoDB : gestion des leads, contrats, facturation, éléments fiscaux, scoring client et déploiement cloud.',
+      technologies: ['Next.js', 'MongoDB', 'JavaScript', 'CRM', 'Cloud', 'Lead Management']
+    },
+    {
+      poste: 'Chef de projet / Développeur PHP',
+      entreprise: 'Freelance - DGS Gabon',
+      lieu: 'Projet RH & Paie',
+      periode: 'Août 2024 – Aujourd\'hui',
+      description: 'Pilotage et développement d\'un portail complet de gestion des ressources humaines : dossiers salariés, congés, paie, documents administratifs et workflows RH en PHP / PostgreSQL.',
+      technologies: ['PHP', 'PostgreSQL', 'Gestion RH', 'Workflows', 'Portail Web']
+    },
     {
       poste: 'Consultant GED',
       entreprise: 'Natixis / BPCE',
@@ -294,6 +393,12 @@ const CV = () => {
 
   const diplomes = [
     {
+      nom: 'Chef de Projet Digital',
+      ecole: 'Openclassrooms',
+      annee: '2025',
+      specialisation: ''
+    },
+    {
       nom: 'Master en Informatique',
       ecole: 'École Supérieure d\'Informatique',
       annee: '2015',
@@ -346,7 +451,7 @@ const CV = () => {
       
       doc.setFontSize(10);
       doc.setTextColor(0, 0, 0);
-      const presentationText = 'Développeur Full Stack passionné avec plus de 8 ans d\'expérience dans la création d\'applications web modernes et performantes. Spécialisé dans les technologies Java/JEE, Spring Boot, React.js et l\'expertise en Gestion Électronique de Documents (GED) avec IBM FileNet.';
+      const presentationText = 'Passionné par le développement logiciel, je m\'engage à créer des solutions robustes et innovantes. Mon approche combine une expertise technique approfondie avec une attention particulière à la qualité du code et à l\'expérience utilisateur. Je m\'efforce constamment d\'améliorer mes compétences et de rester à jour avec les dernières technologies.';
       const splitPresentation = doc.splitTextToSize(presentationText, 170);
       doc.text(splitPresentation, 20, 100);
       
@@ -434,7 +539,7 @@ const CV = () => {
             Zoumeye TOURE
           </h3>
           <p className="text-xl text-gray-300 mb-8">
-            Développeur Full Stack passionné par la création d&apos;applications web modernes et performantes
+            Passionné par le développement logiciel, je m'engage à créer des solutions robustes et innovantes. Mon approche combine une expertise technique approfondie avec une attention particulière à la qualité du code et à l'expérience utilisateur. Je m'efforce constamment d'améliorer mes compétences et de rester à jour avec les dernières technologies.
           </p>
           
           {/* Boutons d'action */}
@@ -493,6 +598,20 @@ const CV = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => setActiveSection('intervention')}
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
+                activeSection === 'intervention'
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
+                  : 'text-gray-300 hover:text-white hover:bg-gray-700'
+              }`}
+            >
+              <span className="text-lg">🎯</span>
+              Niveau d'intervention
+            </motion.button>
+            
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => setActiveSection('competences')}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
                 activeSection === 'competences'
@@ -535,6 +654,20 @@ const CV = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => setActiveSection('langues')}
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
+                activeSection === 'langues'
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
+                  : 'text-gray-300 hover:text-white hover:bg-gray-700'
+              }`}
+            >
+              <span className="text-lg">🌍</span>
+              Langues
+            </motion.button>
+            
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => setActiveSection('diplomes')}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
                 activeSection === 'diplomes'
@@ -565,15 +698,7 @@ const CV = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                    Développeur Full Stack passionné avec plus de 8 ans d&apos;expérience dans la création 
-                    d&apos;applications web modernes et performantes. Spécialisé dans les technologies 
-                    Java/JEE, Spring Boot, React.js et l&apos;expertise en Gestion Électronique de Documents (GED) avec IBM FileNet.
-                  </p>
-                  <p className="text-gray-300 text-lg leading-relaxed">
-                    Je suis constamment à la recherche de nouveaux défis techniques et j&apos;aime 
-                    partager mes connaissances avec les équipes. Mon approche combine créativité, 
-                    rigueur technique et une vision orientée utilisateur, avec une expertise particulière 
-                    dans l&apos;architecture de systèmes documentaires et les solutions d&apos;intelligence artificielle.
+                    Passionné par le développement logiciel, je m'engage à créer des solutions robustes et innovantes. Mon approche combine une expertise technique approfondie avec une attention particulière à la qualité du code et à l'expérience utilisateur. Je m'efforce constamment d'améliorer mes compétences et de rester à jour avec les dernières technologies.
                   </p>
                 </div>
                 <div className="space-y-4">
@@ -589,6 +714,44 @@ const CV = () => {
                       <li>• Veille technologique constante</li>
                     </ul>
                   </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Section Niveau d'intervention */}
+          {activeSection === 'intervention' && (
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700"
+            >
+              <h3 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <span className="text-cyan-400">🎯</span>
+                Niveau d'intervention
+              </h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-xl font-semibold text-white mb-4">Activités principales :</h4>
+                  <ul className="text-gray-300 space-y-3 text-lg">
+                    <li>• Conception et développement d'applications Full Stack</li>
+                    <li>• Intégration de solutions logicielles et interconnexion de systèmes</li>
+                    <li>• Rédaction de spécifications fonctionnelles et techniques</li>
+                    <li>• Maintenance corrective et évolutive des applications</li>
+                    <li>• Analyse, optimisation des performances et refactoring</li>
+                    <li>• Accompagnement au changement et support aux utilisateurs</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-white mb-4">Secteurs d'activité :</h4>
+                  <ul className="text-gray-300 space-y-3 text-lg">
+                    <li>• Télécommunications</li>
+                    <li>• Banque & Assurances</li>
+                    <li>• Recherche & Innovation</li>
+                    <li>• Transport</li>
+                    <li>• Santé</li>
+                  </ul>
                 </div>
               </div>
             </motion.div>
@@ -733,6 +896,50 @@ const CV = () => {
                     </a>
                   </motion.div>
                 ))}
+              </div>
+            </motion.div>
+          )}
+
+          {/* Section Langues */}
+          {activeSection === 'langues' && (
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700"
+            >
+              <h3 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <span className="text-cyan-400">🌍</span>
+                Langues
+              </h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="bg-gray-700 bg-opacity-50 p-6 rounded-lg text-center"
+                >
+                  <h4 className="text-xl font-semibold text-white mb-3">Français</h4>
+                  <p className="text-gray-300 text-lg">Langue maternelle</p>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="bg-gray-700 bg-opacity-50 p-6 rounded-lg text-center"
+                >
+                  <h4 className="text-xl font-semibold text-white mb-3">Anglais</h4>
+                  <p className="text-gray-300 text-lg">Technique</p>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="bg-gray-700 bg-opacity-50 p-6 rounded-lg text-center"
+                >
+                  <h4 className="text-xl font-semibold text-white mb-3">Allemand</h4>
+                  <p className="text-gray-300 text-lg">Bases</p>
+                </motion.div>
               </div>
             </motion.div>
           )}
